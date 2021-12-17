@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Salary Tool</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+  </head>
+
+  <body>
+
+      <div class="login">
+        <div id="title">
+        <h1>Salary Prediction</h1>
+        </div>
+
+        <div id="content">
+
+        <div class="card">
+
+        <form action="{{ url_for('predict')}}" method="post">
+          <label for="yoe">Years of working experience:</label>
+          <input type="number" id="yoe" name="yoe" min="0" max="50" />
+          <br />
+        </div>
+
+        <div class="card">
+          <label for="jobtitle">Job Title (Cluster):</label>
+          <select class="form-select" name="jobtitle" id="jobtitle">
+            <option value=0>Java Developer</option>
+            <option value=1>Ruby Developer</option>
+            <option value=2>Web Developer</option>
+            <option value=3>Data Scientist</option>
+            <option value=4>.NET Developer</option>
+            <option value=5>C Developer</option>
+            <option value=6>Full-Stack Developer</option>
+          </select>
+        </div>
+
+        <div class="card">
+          <label for="education">Education Level:</label>
+          <select class="form-select" name="education" id="education">
+            <option value="Primary/elementary school">
+              Primary/elementary school
+            </option>
+            <option
+              value="Secondary school (e.g. American high school, German Realschule or Gymnasium, etc.)"
+            >
+              Secondary school (e.g. American high school, German Realschule or
+              Gymnasium, etc.)
+            </option>
+            <option
+              value="Some college/university study without earning a degree"
+            >
+              Some college/university study without earning a degree
+            </option>
+            <option value="Bachelor’s degree (B.A., B.S., B.Eng., etc.)">
+              Bachelor’s degree
+            </option>
+            <option value="Master’s degree (M.A., M.S., M.Eng., MBA, etc.)">
+              Master’s degree
+            </option>
+            <option value="Other doctoral degree (Ph.D., Ed.D., etc.)">
+              Other doctoral degree (Ph.D., Ed.D., etc.)
+            </option>
+            <option value="Associate degree (A.A., A.S., etc.)">
+              Associate degree (A.A., A.S., etc.)
+            </option>
+            <option value="Professional degree (JD, MD, etc.)">
+              Professional degree (JD, MD, etc.)
+            </option>
+            <option value="Something else">Something else</option>
+          </select>
+        </div>
+
+        <div class="card">
+          <label for="opsys">Operating System:</label>
+          <select class="form-select" name="opsys" id="opsys">
+            <option value="Windows">Windows</option>
+            <option value="MacOS">MacOS</option>
+            <option value="Linux-based">Linux-based</option>
+            <option value="Windows Subsystem for Linux (WSL)">
+              Windows Subsystem for Linux (WSL)
+            </option>
+            <option value="BSD">BSD</option>
+            <option value="Other (please specify):">Other</option>
+          </select>
+        </div>
+
+        <div class="card">
+          <label for="age">Age Category:</label>
+          <select class="form-select" name="age" id="age">
+            <option value="Under 18 years old">Under 18 years old</option>
+            <option value="18-24 years old">18-24 years old</option>
+            <option value="25-34 years old">25-34 years old</option>
+            <option value="35-44 years old">35-44 years old</option>
+            <option value="45-54 years old">45-54 years old</option>
+            <option value="55-64 years old">55-64 years old</option>
+            <option value="65 years or older">65 years or older</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+          </select>
+        </div>
+
+        <div class="card">
+          <label for="country">Country:</label>
+          <select class="form-select" name="country" id="country">
+            <option value="United States of America">
+              United States of America
+            </option>
+            <option value="India">India</option>
+            <option value="Germany">Germany</option>
+            <option
+              value="United Kingdom of Great Britain and Northern Ireland"
+            >
+              United Kingdom of Great Britain and Northern Ireland
+            </option>
+            <option value="Canada">Canada</option>
+            <option value="Brazil">Brazil</option>
+            <option value="France">France</option>
+            <option value="Poland">Poland</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Spain">Spain</option>
+            <option value="Australia">Australia</option>
+            <option value="Russian Federation">Russian Federation</option>
+            <option value="Italy">Italy</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Turkey">Turkey</option>
+          </select>
+        </div>
+
+        <div class="card">
+          <label for="orgsize">Organization Size:</label>
+          <select class="form-select" name="orgsize" id="orgsize">
+            <option value="Just me - I am a freelancer, sole proprietor, etc.">Just me</option>
+            <option value="2 to 9 employees">2 to 9 employees</option>
+            <option value="10 to 19 employees">10 to 19 employees</option>
+            <option value="20 to 99 employees">20 to 99 employees</option>
+            <option value="100 to 499 employees">100 to 499 employees</option>
+            <option value="500 to 999 employees">500 to 999 employees</option>
+            <option value="1,000 to 4,999 employees">1,000 to 4,999 employees</option>
+            <option value="5,000 to 9,999 employees">5,000 to 9,999 employees</option>
+            <option value="10,000 or more employees">10,000 or more employees</option>
+            <option value="I don’t know">I don’t know</option>
+          </select>
+        </div>
+
+        <br>    
+
+          <button type="submit" class="btn btn-primary btn-block btn-large">
+            Predict
+          </button>
+        </form>
+
+
+        <div class="card-prediction">
+        {{ prediction_text }}
+        </div>
+
+
+      </div>
+    </div>
+  </body>
+</html>
