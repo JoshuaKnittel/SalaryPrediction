@@ -6,7 +6,7 @@ A detailed variant of the model is included in the [jupyter notebook](https://gi
 
 The [model.py](https://github.com/JoshuaKnittel/SalaryPrediction/blob/main/model.py) contains the same model in a shortened form. Based on this file the Flask application is created. 
  
-## Deploy machine learning model with Flask
+## Deployment of machine learning model with Flask
 Simple Flask application, which looks like this:
 ![app_low](https://user-images.githubusercontent.com/70914456/146842824-5e612972-a453-4f10-99f5-494b8eb5c52d.gif)
 
