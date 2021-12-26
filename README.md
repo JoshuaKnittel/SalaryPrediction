@@ -2,7 +2,7 @@
 A machine learning model to predict the salaries of software developers. Deployed with Flask.
  
 ## Machine learning model
-A detailed variant of the model is included in the jupyter notebook "detailed_model.pynb". This notebook contains comments, visualizations and an error analysis. 
+A detailed variant of the model is included in the [jupyter notebook](https://github.com/JoshuaKnittel/SalaryPrediction/blob/main/jupyter_notebook/detailed_model.ipynb) "detailed_model.pynb" in the folder "jupyter_notebook". This notebook contains comments, visualizations and an error analysis. 
 
 The file "model.py" contains the same model in a shortened form. Based on this file the Flask application is created. 
  
