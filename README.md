@@ -9,3 +9,4 @@ The file "model.py" contains the same model in a shortened form. Based on this f
 ## Deploy machine learning model with Flask
 Simple Flask, which looks and works like this:
 ![app_low](https://user-images.githubusercontent.com/70914456/146842824-5e612972-a453-4f10-99f5-494b8eb5c52d.gif)
+To run it yourself run the "app.py" file and check it out.
