@@ -11,4 +11,4 @@ Simple Flask application, which looks like this:
 ![app_low](https://user-images.githubusercontent.com/70914456/146842824-5e612972-a453-4f10-99f5-494b8eb5c52d.gif)
 
 To try it out for yourself, follow the steps below:
-1. 'pip install virtualenv'
+1. `pip install virtualenv`
