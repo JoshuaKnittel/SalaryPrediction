@@ -19,6 +19,6 @@ To try it out for yourself, follow the steps below:
 3. Create virtual environment: `virtualenv venv`
 4. Activate virtual environment: `venv\Scripts\activate`
 5. Install the packages from the requirements.txt: `pip install -r requirements.txt`
-6. Run the Flask app: `python app.py`
+6. Run the Flask app: `python app.py`.
 The trained model and preprocessor are already saved in .pkl files. If you want to run or adjust the model or the preprocessor on your own, you can run/edit the [model.py](https://github.com/JoshuaKnittel/SalaryPrediction/blob/main/model.py) file.  
 
