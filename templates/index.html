@@ -153,9 +153,17 @@
           </button>
         </form>
 
-
+        <!-- display prediction -->
         <div class="card-prediction">
         {{ prediction_text }}
+        </div>
+
+        <!-- display input data -->
+        <div class="query">        
+          <h2>{{ title_query }}</h2>
+          {% for key in data %}
+            <p>{{key}}: {{data[key]}}</p>
+          {% endfor %}
         </div>
 
 
